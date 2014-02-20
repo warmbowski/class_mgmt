@@ -4,6 +4,15 @@ class Student < ActiveRecord::Base
   has_many :registrations
   has_many :courses, through: :registrations
   
+  scope :pauls, -> do
+    where(full_name: 'Paul Laskowski')
+  end
+
+  
+  def self.sysadmins
+    where(title: 'Sysadmin')
+  end
+  
   def combined_info
     "name: #{full_name} /n"+
     "age: #{age} /n"+
@@ -15,4 +24,3 @@ class Student < ActiveRecord::Base
   end
   
 end
-
