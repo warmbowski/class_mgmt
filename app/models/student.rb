@@ -7,10 +7,9 @@ class Student < ActiveRecord::Base
   scope :pauls, -> do
     where(full_name: 'Paul Laskowski')
   end
-
   
   def self.sysadmins
-    where(title: 'Sysadmin')
+    where(title: 'Sysadmin').pluck(:full_name)
   end
   
   def combined_info

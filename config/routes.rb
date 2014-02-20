@@ -1,6 +1,12 @@
 ClassMgmt::Application.routes.draw do
   resources :students
 
+  get '/happy', to: 'students#index'
+  
+  get '/welcome/:test', to: 'welcome#hello'
+  
+  root to: 'welcome#hello'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
