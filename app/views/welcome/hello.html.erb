@@ -1,9 +1,13 @@
 <h1>Hello World!!</h1>
 <%= Time.now %>
-<% @sysadmin_names.each do |name| %>
-	<%= name %>
-<% end %>
 
+<p>
+	<h3>These are the sysadmins:</h3>
+	<ul>
+<% @sysadmin_names.each do |name| %>
+		<li><%= name %></li>
+<% end %>
+	</ul>
 <br/>
-Param you set: 
+Welcome message: 
 <%= @from_user %>
