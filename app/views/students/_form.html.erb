@@ -20,6 +20,10 @@
     <%= f.email_field :email %>
   </div>
   <div class="field">
+    <%= f.label :courses %><br>
+    <%= f.collection_select :courses, Course.all, :id, :title %>
+  </div>
+  <div class="field">
     <%= f.label :age %><br>
     <%= f.number_field :age %>
   </div>
