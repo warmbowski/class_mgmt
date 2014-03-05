@@ -1,6 +1,7 @@
 class CoursesController < ApplicationController
   def new
     @course = Course.new
+    render 'new', layout: 'bootstrap'
   end
 
   def create
