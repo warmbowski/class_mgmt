@@ -4,6 +4,8 @@ class Student < ActiveRecord::Base
   has_many :registrations
   has_many :courses, through: :registrations
   
+  validates_presence_of :full_name, :email
+  
   scope :pauls, -> do
     where(full_name: 'Paul Laskowski')
   end

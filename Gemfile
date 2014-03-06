@@ -6,6 +6,12 @@ gem 'rails', '4.0.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+group :test, :development do 
+  gem 'rspec-rails'
+  gem 'capybara-rails'
+end
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
