@@ -8,8 +8,8 @@ describe Student, type: :feature do
     it "should let the user know about missing first name" do
       
       visit '/students/new'
-      puts page.body
-      
+      click_button "Create Student"
+      page.should have_content "Full name can't be blank"
       
     end
     
