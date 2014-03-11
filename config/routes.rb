@@ -1,4 +1,5 @@
 ClassMgmt::Application.routes.draw do
+  devise_for :students
   get "courses/new"
   post "courses", to: 'courses#create'
   

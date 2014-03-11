@@ -1,2 +1,9 @@
-Notice: <%= notice %>
-Alert: <%= alert %>
+<% if current_student %>
+	You are logged in as: <%= current_student.email %>
+	<%= link_to 'Log Out', destroy_student_session_path, method: :delete %>
+<% else %>
+	<%= link_to 'Log In', new_student_session_path %>
+<%end%>
+
+<p>Notice: <%= notice %></p>
+<p>Alert: <%= alert %></p>
